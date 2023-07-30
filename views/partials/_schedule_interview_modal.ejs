@@ -1,0 +1,62 @@
+<div
+  class="modal fade"
+  id="schedule-interview-modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="add-interview-header">
+          Schedule Interview
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="schedule-interview-form">
+          <div class="form-group">
+            <label for="company-name">Company name</label>
+            <input
+              id="company-name"
+              name="company_name"
+              type="text"
+              placeholder="Enter company name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="interview-date" class="mr-3">Interview Date</label>
+            <input id="interview-date" name="date" type="date" required />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn secondary-btn"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn primary-btn submit"
+              data-form-id="#schedule-interview-form"
+              data-modal-id="#schedule-interview-modal"
+              data-url="/interview/create"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

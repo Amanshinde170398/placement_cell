@@ -2,14 +2,22 @@ const Student = require("../models/student");
 
 // Add student to DB
 module.exports.create = async (req, res) => {
-  const { email } = { ...req.body };
-  let student = await Student.findOne({ email: email });
-  if (student) {
-    console.log("student already present!");
-    return res.redirect("back");
+  try {
+    const { email } = { ...req.body };
+    let student = await Student.findOne({ email: email });
+    if (student) {
+      console.log("student already present!");
+      return res
+        .status(400)
+        .json({ successful: false, message: "Student already exist" });
+    }
+    student = await Student.create(req.body);
+    return res.json({ successful: true });
+  } catch (err) {
+    return res
+      .status(400)
+      .json({ successful: false, message: "Fill all fields" });
   }
-  student = await Student.create(req.body);
-  return res.json({ successful: true });
 };
 
 // Get al students
