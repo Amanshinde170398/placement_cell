@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
-const companySchema = mongoose.Schema(
+const interviewSchema = mongoose.Schema(
   {
-    name: {
+    company_name: {
       type: String,
       require: true,
       unique: true,
       lowercase: true,
     },
     date: {
-      type: Date,
+      type: String,
       require: true,
     },
     interviews: [
@@ -19,7 +19,7 @@ const companySchema = mongoose.Schema(
         },
         result: {
           type: String,
-          enum: [["Pass", "Fail", "On Hold", "Not Attempted"]],
+          enum: ["pass", "fail", "on hold", "not attempted"],
         },
       },
     ],
@@ -29,5 +29,5 @@ const companySchema = mongoose.Schema(
   }
 );
 
-const Company = mongoose.model("Company", companySchema);
-module.exports = Company;
+const Interview = mongoose.model("Interview", interviewSchema);
+module.exports = Interview;
