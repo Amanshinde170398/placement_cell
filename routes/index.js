@@ -7,5 +7,6 @@ router.get("/", passport.checkAuthentication, dashboardController.dashboard);
 // Route to user
 router.use("/user", require("./user"));
 router.use("/dashboard", require("./dashboard"));
+router.use("/student", require("./student"));
 
 module.exports = router;

@@ -1,0 +1,27 @@
+input {
+  font-weight: 100;
+  color: #1c1b1b;
+}
+
+.action-btn {
+  text-align: right;
+}
+
+.field-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.placement--options {
+  width: 8.5rem;
+  font-weight: 100;
+  color: #312f2f;
+}
+
+.score input {
+  width: 8rem;
+}
+
+.modal-dialog {
+  width: 50rem;
+}
