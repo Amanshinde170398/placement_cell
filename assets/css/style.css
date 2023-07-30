@@ -9,6 +9,22 @@ a:hover {
   color: inherit;
 }
 
+form input {
+  border: 1.5px solid rgb(154, 153, 153);
+  border-radius: 5px;
+}
+
+.primary-btn {
+  background-color: #7d2aea;
+  color: white;
+}
+
+.secondary-btn {
+  background-color: white;
+  border-color: #7d2aea;
+  color: #7d2aea;
+}
+
 .navbar {
   background-color: #7d2aea;
   color: white;

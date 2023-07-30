@@ -29,7 +29,7 @@ const studentSchema = mongoose.Schema(
     placement: {
       type: String,
       required: true,
-      enum: ["Placed", "Not Placed"],
+      enum: ["placed", "not placed"],
     },
     dsa: {
       type: Number,
@@ -46,15 +46,14 @@ const studentSchema = mongoose.Schema(
     interview: [
       {
         company: {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "Company",
+          type: String,
         },
         date: {
           type: String,
         },
         result: {
           type: String,
-          enum: ["Pass", "Fail", "On Hold", "Not Attempted"],
+          enum: ["pass", "fail", "on hold", "not attempted"],
         },
       },
     ],

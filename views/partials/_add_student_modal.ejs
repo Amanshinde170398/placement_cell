@@ -1,0 +1,144 @@
+<div
+  class="modal fade"
+  id="add-student-modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="add-student-header">Add Student</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/student/create" action="post" id="add-student-form">
+          <div class="form-group field-container">
+            <div class="first-name-cont">
+              <label for="student-name">Name</label>
+              <input
+                id="student-name"
+                name="name"
+                type="text"
+                placeholder="Enter student name"
+                required
+              />
+            </div>
+            <div class="last-name-cont">
+              <label for="student-email">Email</label>
+              <input
+                id="student-email"
+                name="email"
+                type="email"
+                placeholder="Enter student email"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group field-container">
+            <div class="first-name-cont">
+              <label for="student-phone">Phone</label>
+              <input
+                id="student-phone"
+                name="phone_number"
+                type="number"
+                placeholder="Enter student phone"
+                required
+              />
+            </div>
+            <div class="last-name-cont">
+              <label for="student-batch">Batch</label>
+              <input
+                id="student-batch"
+                name="batch"
+                type="text"
+                placeholder="Enter student batch"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group field-container">
+            <div class="first-name-cont">
+              <label for="student-college">College</label>
+              <input
+                id="student-college"
+                name="college"
+                type="text"
+                placeholder="Enter student college"
+                required
+              />
+            </div>
+            <div class="last-name-cont">
+              <label for="student-placement">Placement</label>
+              <select
+                name="placement"
+                class="placement--options"
+                id="student-placement"
+              >
+                <option value="placed">Placed</option>
+                <option value="not placed">Not Placed</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group field-container">
+            <div class="first-name-cont score">
+              <label for="student-DSA">DSA</label>
+              <input
+                id="student-DSA"
+                name="dsa"
+                type="number"
+                placeholder="Enter score"
+                required
+              />
+            </div>
+            <div class="first-name-cont score">
+              <label for="student-webd">WebD</label>
+              <input
+                id="student-webd"
+                name="webd"
+                type="number"
+                placeholder="Enter score"
+                required
+              />
+            </div>
+            <div class="first-name-cont score">
+              <label for="student-react">React</label>
+              <input
+                id="student-react"
+                name="react"
+                type="number"
+                placeholder="Enter score"
+                required
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn secondary-btn"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn primary-btn submit"
+              data-form-id="#add-student-form"
+              data-modal-id="#add-student-modal"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
