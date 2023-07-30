@@ -40,8 +40,35 @@ form input {
   justify-content: space-between;
 }
 
-.signup-container form button[type="submit"] {
+form button[type="submit"] {
   width: 100%;
   background-color: #7d2aea;
   color: white;
+}
+
+/* css of login page */
+
+.login-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #7d2aea;
+}
+
+.login-form {
+  margin: auto;
+  background-color: white;
+  width: 30rem;
+  height: 27 rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem 3rem;
+  border-radius: 5px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: #007bff;
 }

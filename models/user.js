@@ -23,6 +23,11 @@ const userSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    phone_number: {
+      type: Number,
+      unique: true,
+      required: true,
+    },
   },
   { timestamps: true }
 );
