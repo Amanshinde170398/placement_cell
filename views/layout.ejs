@@ -15,6 +15,9 @@
     <%- style%>
   </head>
   <body>
+    <!-- navbar -->
+    <% if(locals.user) {%> <%- include("./partials/_header") %> <%}%>
+    <!-- Body -->
     <%- body %>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

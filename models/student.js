@@ -13,11 +13,9 @@ const studentSchema = mongoose.Schema(
       required: true,
       lowercase: true,
     },
-    contact_number: {
+    phone_number: {
       type: Number,
       unique: true,
-      min: [10, "Must be 10, got {VALUE}"],
-      max: [10, "Must be 10, got {VALUE}"],
     },
     batch: {
       type: String,
