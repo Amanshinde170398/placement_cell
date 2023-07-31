@@ -50,7 +50,7 @@ tr:nth-child(even) {
   margin: 2rem 3rem;
 }
 .data-container {
-  border: 1px solid black;
+  border: 1px solid #00000033;
   max-height: 40rem;
 }
 
@@ -65,9 +65,11 @@ tr:nth-child(even) {
 }
 
 .details-container ul li {
-  border: 1px solid black;
+  border: 1px solid #0000000f;
   height: 4rem;
   padding: 20px 15px;
+  box-shadow: 3px 3px 5px lightgrey;
+  margin-bottom: 6px;
 }
 
 .data-item {
@@ -84,4 +86,9 @@ tr:nth-child(even) {
 .update-profile {
   display: flex;
   justify-content: space-around;
+}
+
+.schedule-student-interview {
+  display: flex;
+  justify-content: space-between;
 }
