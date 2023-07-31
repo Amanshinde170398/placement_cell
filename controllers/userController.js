@@ -19,7 +19,6 @@ module.exports.signup = (req, res) => {
 
 // Register the user
 module.exports.register = async (req, res) => {
-  console.log("body", req.body);
   const { email, password, confirm_password } = { ...req.body };
   if (password != confirm_password) {
     res.redirect("back");

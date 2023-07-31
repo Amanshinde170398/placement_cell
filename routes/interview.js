@@ -11,6 +11,7 @@ router.post(
 router.get("/show", passport.checkAuthentication, interviewController.show);
 router.post(
   "/schedule_interview",
+  passport.checkAuthentication,
   interviewController.scheduleStudentInterview
 );
 

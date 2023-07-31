@@ -8,25 +8,17 @@ module.exports.create = async (req, res) => {
     let interview = await Interview.findOne({ company_name: company_name });
     if (interview) {
       console.log("compnay Already exist");
-      res
-        .status(400)
-        .json({ successfull: false, message: "company already exist" });
+      res.redirect("back");
     }
     interview = await Interview.create(req.body);
-    return res.json({
-      successfull: true,
-      data: {
-        interview: interview,
-      },
-    });
+    return res.redirect("/dashboard");
   } catch (err) {
     console.log(err);
-    return res
-      .status(400)
-      .json({ successfull: false, message: "Fill all fields" });
+    return res.redirect("back");
   }
 };
 
+// Show interview detail
 module.exports.show = async (req, res) => {
   try {
     const interviews = await Interview.find({});
@@ -36,6 +28,7 @@ module.exports.show = async (req, res) => {
   }
 };
 
+// Add student for interview
 module.exports.scheduleStudentInterview = async (req, res) => {
   try {
     const { email, company_name, result } = { ...req.body };
@@ -52,7 +45,6 @@ module.exports.scheduleStudentInterview = async (req, res) => {
     }
     interview.interviews.push({ student: student.name, result: result });
     interview = await interview.save();
-    console.log(interview);
     student.interview.push({
       company: company_name,
       result: result,

@@ -20,7 +20,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="/student/create" action="post" id="add-student-form">
+        <form action="/student/create" method="post" id="add-student-form">
           <div class="form-group field-container">
             <div class="first-name-cont">
               <label for="student-name">Name</label>
@@ -129,8 +129,8 @@
               Close
             </button>
             <button
-              type="button"
-              class="btn primary-btn submit"
+              type="submit"
+              class="btn primary-btn"
               data-form-id="#add-student-form"
               data-modal-id="#add-student-modal"
               data-url="/student/create"
