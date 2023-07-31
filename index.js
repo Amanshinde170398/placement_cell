@@ -18,7 +18,6 @@ app.set("layout extractStyles", true);
 app.set("layout extractScripts", true);
 app.use(express.static(path.join(__dirname, "./assets")));
 app.use(express.urlencoded());
-console.log("index", 21);
 app.use(
   session({
     name: "placement_cell",

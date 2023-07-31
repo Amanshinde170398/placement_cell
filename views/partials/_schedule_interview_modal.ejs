@@ -22,7 +22,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <form id="schedule-interview-form">
+        <form
+          action="/interview/create"
+          method="post"
+          id="schedule-interview-form"
+        >
           <div class="form-group">
             <label for="company-name">Company name</label>
             <input
@@ -46,8 +50,8 @@
               Close
             </button>
             <button
-              type="button"
-              class="btn primary-btn submit"
+              type="submit"
+              class="btn primary-btn"
               data-form-id="#schedule-interview-form"
               data-modal-id="#schedule-interview-modal"
               data-url="/interview/create"
