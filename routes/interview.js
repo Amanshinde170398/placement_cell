@@ -9,5 +9,9 @@ router.post(
   interviewController.create
 );
 router.get("/show", passport.checkAuthentication, interviewController.show);
+router.post(
+  "/schedule_interview",
+  interviewController.scheduleStudentInterview
+);
 
 module.exports = router;

@@ -19,3 +19,11 @@ $(".submit").click(function (e) {
     },
   });
 });
+
+// On click of add student for interview add company name to hidden field
+$(".schedule-interview-btn").click(function () {
+  const companyName = $(this).attr("data-company-name");
+  const interviewModal = $("#schedule-student-interview-modal");
+  const companyNameFiled = interviewModal.find("input[name='company_name']");
+  companyNameFiled.val(companyName);
+});

@@ -38,10 +38,10 @@
             </div>
             <div class="collapse" id="student-details-<%=student._id%>">
               <div class="card card-body detail-body">
-                <div class="update-profile mb-2">
+                <!-- <div class="update-profile mb-2">
                   <button class="btn primary-btn mr-2">update profile</button>
                   <button class="btn secondary-btn">Delete profile</button>
-                </div>
+                </div> -->
                 <div class="mt-2">
                   <p class="center">User Details</p>
                   <table>
@@ -88,16 +88,13 @@
                       <th>Date</th>
                       <th>Result</th>
                     </tr>
+                    <% for(let interview of student.interview){ %>
                     <tr>
-                      <td>TCS</td>
-                      <td>31/07/2023</td>
-                      <td>Germany</td>
+                      <td><%= interview.company %></td>
+                      <td><%= interview.date %></td>
+                      <td><%= interview.result %></td>
                     </tr>
-                    <tr>
-                      <td>TCS</td>
-                      <td>31/07/2023</td>
-                      <td>Germany</td>
-                    </tr>
+                    <%}%>
                   </table>
                 </div>
               </div>
@@ -128,15 +125,24 @@
             <div class="collapse" id="company-details-<%= interview._id %>">
               <div class="card card-body detail-body">
                 <div class="mt-2 schedule-student-interview">
-                  <button class="btn primary-btn center">Add Students</button>
+                  <button
+                    class="btn primary-btn center schedule-interview-btn"
+                    data-toggle="modal"
+                    data-target="#schedule-student-interview-modal"
+                    data-company-name="<%= interview.company_name %>"
+                  >
+                    Add Student
+                  </button>
                   <p>Date: <span><%= interview.date %></span></p>
                 </div>
                 <div class="mt-2">
                   <table>
+                    <% for(let inter of interview.interviews){ %>
                     <tr>
-                      <td>Aman Shinde</td>
-                      <td>Passed</td>
+                      <td><%= inter.student %></td>
+                      <td><%= inter.result %></td>
                     </tr>
+                    <% } %>
                   </table>
                 </div>
               </div>
@@ -152,3 +158,5 @@
 <%- include('../partials/_add_student_modal')%>
 <!-- -->
 <%- include('../partials/_schedule_interview_modal') %>
+<!-- -->
+<%- include('../partials/_schedule_student_interview_modal') %>
