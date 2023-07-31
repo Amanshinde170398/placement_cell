@@ -14,8 +14,7 @@ const interviewSchema = mongoose.Schema(
     interviews: [
       {
         student: {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "Student",
+          type: String,
         },
         result: {
           type: String,
