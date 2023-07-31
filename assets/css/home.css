@@ -3,6 +3,22 @@ input {
   color: #1c1b1b;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 .action-btn {
   text-align: right;
 }
@@ -24,4 +40,55 @@ input {
 
 .modal-dialog {
   width: 50rem;
+}
+
+/* dashboard styling */
+.list-container {
+  display: grid;
+  grid-template-columns: 46vw 46vw;
+  gap: 1rem;
+  margin: 2rem 3rem;
+}
+.data-container {
+  border: 1px solid #00000033;
+  max-height: 40rem;
+}
+
+.container-heading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.details-container ul {
+  list-style-type: none;
+  padding: 0 2rem;
+}
+
+.details-container ul li {
+  border: 1px solid #0000000f;
+  height: 4rem;
+  padding: 20px 15px;
+  box-shadow: 3px 3px 5px lightgrey;
+  margin-bottom: 6px;
+}
+
+.data-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-body {
+  width: 32.5rem;
+  right: 18px;
+  top: 4px;
+}
+
+.update-profile {
+  display: flex;
+  justify-content: space-around;
+}
+
+.schedule-student-interview {
+  display: flex;
+  justify-content: space-between;
 }

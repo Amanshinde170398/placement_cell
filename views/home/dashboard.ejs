@@ -17,6 +17,136 @@
       Schedule Interview
     </button>
   </div>
+  <div class="list-container">
+    <div class="student-list-container data-container">
+      <div class="container-heading">Student List</div>
+      <div class="details-container">
+        <ul>
+          <% for(let student of locals.students) {%>
+          <li>
+            <div class="data-item">
+              <p class="student-name"><%=student.name %></p>
+              <a
+                data-toggle="collapse"
+                href="#student-details-<%=student._id%>"
+                role="button"
+                aria-expanded="false"
+                aria-controls="student-details"
+              >
+                <i class="fa-solid fa-plus fa-lg" style="color: #7d2aea"></i>
+              </a>
+            </div>
+            <div class="collapse" id="student-details-<%=student._id%>">
+              <div class="card card-body detail-body">
+                <div class="update-profile mb-2">
+                  <button class="btn primary-btn mr-2">update profile</button>
+                  <button class="btn secondary-btn">Delete profile</button>
+                </div>
+                <div class="mt-2">
+                  <p class="center">User Details</p>
+                  <table>
+                    <tr>
+                      <td>Email</td>
+                      <td><%=student.email %></td>
+                    </tr>
+                    <tr>
+                      <td>Phone Number</td>
+                      <td><%=student.phone_number %></td>
+                    </tr>
+                    <tr>
+                      <td>Batch</td>
+                      <td><%=student.batch %></td>
+                    </tr>
+                    <tr>
+                      <td>College</td>
+                      <td><%=student.college%></td>
+                    </tr>
+                    <tr>
+                      <td>Placement status</td>
+                      <td><%=student.placement %></td>
+                    </tr>
+                    <tr>
+                      <td>DSA</td>
+                      <td><%=student.dsa %></td>
+                    </tr>
+                    <tr>
+                      <td>WEBD</td>
+                      <td><%=student.webd %></td>
+                    </tr>
+                    <tr>
+                      <td>React</td>
+                      <td><%=student.react %></td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="mt-2">
+                  <p class="center">Interview Details</p>
+                  <table>
+                    <tr>
+                      <th>Company</th>
+                      <th>Date</th>
+                      <th>Result</th>
+                    </tr>
+                    <tr>
+                      <td>TCS</td>
+                      <td>31/07/2023</td>
+                      <td>Germany</td>
+                    </tr>
+                    <tr>
+                      <td>TCS</td>
+                      <td>31/07/2023</td>
+                      <td>Germany</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+          <%}%>
+        </ul>
+      </div>
+    </div>
+    <div class="interview-list-container data-container">
+      <div class="container-heading">Schedule Interviews</div>
+      <div class="details-container">
+        <ul>
+          <% for(let interview of locals.interviews){ %>
+          <li>
+            <div class="data-item">
+              <p class="company-name"><%= interview.company_name %></p>
+              <a
+                data-toggle="collapse"
+                href="#company-details-<%= interview._id%>"
+                role="button"
+                aria-expanded="false"
+                aria-controls="student-details"
+              >
+                <i class="fa-solid fa-plus fa-lg" style="color: #7d2aea"></i>
+              </a>
+            </div>
+            <div class="collapse" id="company-details-<%= interview._id %>">
+              <div class="card card-body detail-body">
+                <div class="mt-2 schedule-student-interview">
+                  <button class="btn primary-btn center">Add Students</button>
+                  <p>Date: <span><%= interview.date %></span></p>
+                </div>
+                <div class="mt-2">
+                  <table>
+                    <tr>
+                      <td>Aman Shinde</td>
+                      <td>Passed</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+          <%} %>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
 <%- include('../partials/_add_student_modal')%>
