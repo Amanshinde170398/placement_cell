@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 
 const main = async () => {
-  await mongoose.connect("mongodb://127.0.0.1:27017/placement_cell");
+  await mongoose.connect(
+    "mongodb+srv://1703amanshinde98:eteTKBvDSdMdVcbD@aman.evnkzhp.mongodb.net/"
+  );
 };
 
 main().catch((err) => console.log(err));

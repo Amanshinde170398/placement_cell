@@ -1,6 +1,2 @@
 student Id, Student name, Student email, Student college, Student status, DSA Final Score, WebD Final Score, React Final Score, Interview date, Interview company, Interview result
-64c7c52fdd5f1037d0b47d3d,aditi chavan,aditi@local.com,abcd college,placed,80,80,80,2023-07-31,infosys,pass
-64c7c52fdd5f1037d0b47d3d,aditi chavan,aditi@local.com,abcd college,placed,80,80,80,2023-07-31,tcs,not attempted
-64c7c55edd5f1037d0b47d4b,anvi chavan,anvi@local.com,abcd college,placed,90,90,90,2023-07-31,infosys,pass
-64c7d0b04d86ac51ce38a522,bhushan,bhushan@local.com,abcd college,placed,12,45,45,2023-08-01,coding ninjas,pass
-64c7d18927a272c148d617cb,kartik nair,kartik@local.com,nbn college,not placed,78,78,78,2023-08-02,accenture,on hold
+64c7e45b4e779fda710e34a8,aditi chavan,aditi@local.com,nbn college of engineering,placed,90,90,90,2023-07-31,tcs,pass
