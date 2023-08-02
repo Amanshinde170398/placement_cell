@@ -13,6 +13,15 @@ Placement cell is web application which you can use to manage student interview 
 PORT=<Your port>
 MONGO_CONNECTION_URL=<Your mongo url>
 
+## Setup
+
+1. npm install - Install all dependencies
+2. npm start - start the server.
+
+## Hosting URL
+
+https://aman-placement-cell-app.onrender.com
+
 ## Authors
 
 - [@Amanshinde170398](https://github.com/Amanshinde170398)
